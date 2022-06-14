@@ -1,0 +1,36 @@
+.slider {
+    position: relative;
+    width: 100vw;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .left-arrow {
+        position: absolute;
+        top: 100%;
+        background-color: black;
+        left: 10px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .right-arrow {
+        position: absolute;
+        background-color: black;
+        top: 100%;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .slide-image {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+    }
+}
+
+
+
