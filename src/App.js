@@ -3,13 +3,16 @@ import Header from "./Header/Header";
 import {SliderData} from "./image_slider/SliderData";
 import HomeBlog from "./HomeBlog/HomeBlog";
 import BlogCardContainer from "./BlogCardContainer/BlogCardContainer";
+import Footer from "./Footer/Footer";
+
 function App() {
   return (
     <div className="App">
-        <Header/>
+      <Header/>
       <ImageSlider slides={SliderData}></ImageSlider>
-        <HomeBlog/>
-        <BlogCardContainer/>
+      <HomeBlog/>
+      <BlogCardContainer/>
+      <Footer/>
     </div>
   );
 }
