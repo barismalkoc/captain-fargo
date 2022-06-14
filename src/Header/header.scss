@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 72px;
+  background: white;
+  img {
+    margin: 10px;
+    height: 52px;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    ul {
+      display: flex;
+      gap: 2rem;
+      margin: 10px 0;
+      list-style-type: none;
+    }
+  }
+}
