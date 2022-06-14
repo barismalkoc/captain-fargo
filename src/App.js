@@ -1,19 +1,11 @@
-import ImageSlider from "./image_slider/ImageSlider";
-import Header from "./Header/Header";
-import {SliderData} from "./image_slider/SliderData";
-import HomeBlog from "./HomeBlog/HomeBlog";
-import BlogCardContainer from "./BlogCardContainer/BlogCardContainer";
-import Footer from "./Footer/Footer";
+import {BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom';
+import HomePage from "./pages/HomePage/HomePage";
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <ImageSlider slides={SliderData}></ImageSlider>
-      <HomeBlog/>
-      <BlogCardContainer/>
-      <Footer/>
-    </div>
+      <Routes>
+        <Route path={"/"} element={<HomePage/>}></Route>
+      </Routes>
   );
 }
 

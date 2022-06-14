@@ -10,7 +10,7 @@ export const BlogCardContainerData = [
     desc : "Deniz tutkunu olan ve mavi tura çıkmayan isteyen kişilerin bu eşsiz deneyimi yaşamadan önce bilmesi ve dikkat etmesi gereken bazı önemli noktalar vardır",
   },
   {
-    image: "https://captainfargo.com/media/__sized__/versatileimages/tekne_yasami-crop-c0-5__0-5-1100x733-70.jpg",
+    image: "https://www.bavariayachts.com/fileadmin/_processed_/6/d/csm_preview-social-media-sailingyachts_6095966e0a.jpg",
     title: "Türkiye’de En İyi Mavi Tur Rotaları",
     desc: "Üç yanı denizlerle çevrili ülkemizin eşsiz koylarının, mükemmel bir tatilin tadını çıkartmak istiyorsanız gelin Türkiye’nin en güzel mavi tur rotalarını hep birlikte inceleyelim.",
   }
