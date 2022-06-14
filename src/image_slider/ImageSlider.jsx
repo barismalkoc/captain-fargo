@@ -6,7 +6,7 @@ function ImageSlider({slides}) {
     const length = slides.length;
 
     useEffect(() => {
-        nextSlide();
+        autoSlide();
     }, []);
 
     const nextSlide = () => {
@@ -15,7 +15,10 @@ function ImageSlider({slides}) {
         }else{
             setCurrent(current + 1);
         }
-        setInterval(nextSlide,3000);
+    }
+
+    const autoSlide = () => {
+        setTimeout(nextSlide,3000);
     }
 
     const prevSlide = () => {
@@ -30,7 +33,9 @@ function ImageSlider({slides}) {
 
 
     return (
+
         <div className={"slider"}>
+
             <span className={"left-arrow"} onClick={prevSlide}></span>
             <span className={"right-arrow"} onClick={nextSlide}></span>
             {slides.map((slide,index) => {
