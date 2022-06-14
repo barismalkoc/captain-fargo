@@ -13,12 +13,19 @@
   nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 60%;
     ul {
       display: flex;
       gap: 2rem;
       margin: 10px 0;
       list-style-type: none;
+      li {
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 }
