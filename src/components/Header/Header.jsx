@@ -1,22 +1,29 @@
 import React from 'react';
 import './header.scss'
 import {Link} from "react-router-dom";
+import {HeaderData} from "./HeaderData";
 
 function Header() {
+    const logoData = HeaderData.logo;
+    const headerLink = HeaderData.headerLink;
     return (
         <div className={"header"}>
             <nav>
-                <Link to={"/"}>
-                    <img src="https://captainfargo.com/static/main/logo_cf.883785491523.png"/>
-                </Link>
-
+            {logoData.map(((info, index) => {
+                return(
+                  <Link to={info.url}  key={index}>
+                      <img src={info.imageUrl}/>
+                  </Link>
+                )
+            }))}
                 <ul>
-                    <Link to={"/blueVoyage"}>Mavi Yolculuk</Link>
-                    <Link to={"/about"}>Hakkımızda</Link>
-                    <Link to={"/faq"}>SSS</Link>
-                    <Link to={"/blog"}>Blog</Link>
-                    <li>Giriş Yap</li>
-                    <li>Üye Ol</li>
+                {headerLink.map((link, index) => {
+                    return (
+                      <Link to={link.url}  key={index}>{link.title}</Link>
+                      )
+                })}
+                  <li>Giriş Yap</li>
+                  <li>Üye Ol</li>
                 </ul>
             </nav>
         </div>

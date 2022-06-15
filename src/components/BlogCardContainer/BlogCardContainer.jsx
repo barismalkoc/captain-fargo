@@ -6,7 +6,6 @@ import {Link} from "react-router-dom";
 import "./BlogCardContainer.scss"
 function BlogCardContainer(props) {
   const data = BlogCardContainerData;
-  console.log(data)
   return (
     <div className={"blog-container"}>
       <div className={"blog"}>

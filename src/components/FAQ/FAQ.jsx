@@ -1,22 +1,15 @@
 import React from 'react';
 import {FAQData} from "./FAQData";
-
+import DropDown from "../DropDown/DropDown";
+import "./FAQ.scss"
 function Faq(props) {
 
   const data = FAQData.data;
   return (
-    <div>
+    <div className={"faq"}>
       {data.map((info, index) => {
         return(
-          <div>
-            <h5>{info.title}</h5>
-            {info.desc.map((desc, index) => {
-                  return(
-                      <p>{desc}</p>
-                  )
-            })}
-          </div>
-
+          <DropDown data={info} key={index}></DropDown>
         )
       })}
     </div>
