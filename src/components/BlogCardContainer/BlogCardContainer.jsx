@@ -8,8 +8,6 @@ function BlogCardContainer(props) {
   const data = BlogCardContainerData;
   console.log(data)
   return (
-
-
     <div className={"blog-container"}>
       <div className={"blog"}>
         <BlogCard props = {data}></BlogCard>
@@ -19,11 +17,7 @@ function BlogCardContainer(props) {
         <Link to = "/blog">BLOĞUMUZA GÖZ ATIN</Link>
         <img src={"https://captainfargo.com/static/main/ic-right-arrow.179f968435bb.svg"}/>
       </div>
-
     </div>
-
-
-
   );
 }
 

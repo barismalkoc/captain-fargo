@@ -31,10 +31,10 @@
         gap: 4px;
         list-style: none;
         padding: 0;
-        .inactive {
+        a {
           cursor: pointer;
-          color : #666666;
           text-decoration: none;
+          color: white;
           &:hover {
             text-decoration: underline;
           }
