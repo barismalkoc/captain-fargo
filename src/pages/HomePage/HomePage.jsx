@@ -7,7 +7,7 @@ import Footer from "../../components/Footer/Footer";
 
 function HomePage() {
   return (
-    <div className="HomePage">
+    <div className="homePage">
 
       <ImageSlider slides={SliderData}></ImageSlider>
       <HomeBlog/>
