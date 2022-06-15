@@ -7,12 +7,12 @@ import Footer from "../../components/Footer/Footer";
 
 function HomePage() {
   return (
-    <div className="App">
-      <Header/>
+    <div className="HomePage">
+
       <ImageSlider slides={SliderData}></ImageSlider>
       <HomeBlog/>
       <BlogCardContainer/>
-      <Footer/>
+
     </div>
   );
 }
