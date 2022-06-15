@@ -22,7 +22,7 @@ function Footer() {
           </div>
           <div className={"right-side"}>
             <ul>
-              <li>Mavi Yolculuk</li>
+              <Link to={"/blueVoyage"}>Mavi Yolculuk</Link>
               <Link to={"/about"}>Hakkımızda</Link>
               <li>SSS</li>
               <Link to={"/blog"}>Blog</Link>
