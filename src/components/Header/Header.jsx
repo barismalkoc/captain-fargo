@@ -6,12 +6,15 @@ function Header() {
     return (
         <div className={"header"}>
             <nav>
-                <img src="https://captainfargo.com/static/main/logo_cf.883785491523.png"/>
+                <Link to={"/"}>
+                    <img src="https://captainfargo.com/static/main/logo_cf.883785491523.png"/>
+                </Link>
+
                 <ul>
-                    <li>Mavi Yolculuk</li>
-                    <li><Link to={"/about"}>Hakkımızda</Link></li>
+                    <Link to={"/blueVoyage"}>Mavi Yolculuk</Link>
+                    <Link to={"/about"}>Hakkımızda</Link>
                     <li>SSS</li>
-                    <li>Blog</li>
+                    <Link to={"/blog"}>Blog</Link>
                     <li>Giriş Yap</li>
                     <li>Üye Ol</li>
                 </ul>

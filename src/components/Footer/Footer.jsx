@@ -1,12 +1,16 @@
 import React from 'react';
 import './footer.scss'
+import {Link} from "react-router-dom";
 
 function Footer() {
     return (
       <div className={"footer"}>
         <div className={"container"}>
           <div className={"left-side"}>
-            <img src="https://captainfargo.com/static/main/logo_white.e7a528a00d67.png"/>
+            <Link to={"/"}>
+              <img src="https://captainfargo.com/static/main/logo_white.e7a528a00d67.png"/>
+            </Link>
+
             <p className={"address"}>Ömer Avni Mah. Beytül Malcı Sk. No: 10/9 Kabataş Beyoğlu/İstanbu</p>
             <hr/>
             <p className={"tel-no"}>
@@ -19,9 +23,9 @@ function Footer() {
           <div className={"right-side"}>
             <ul>
               <li>Mavi Yolculuk</li>
-              <li>Hakkımızda</li>
+              <Link to={"/about"}>Hakkımızda</Link>
               <li>SSS</li>
-              <li>Blog</li>
+              <Link to={"/blog"}>Blog</Link>
               <li>Giriş Yap</li>
               <li>Üye Ol</li>
             </ul>

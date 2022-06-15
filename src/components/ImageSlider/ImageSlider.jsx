@@ -5,9 +5,7 @@ function ImageSlider({slides}) {
     const [current, setCurrent] = useState(0);
     const length = slides.length;
 
-    useEffect(() => {
-        autoSlide();
-    }, []);
+
 
     const nextSlide = () => {
         if(current === length - 1) {
@@ -17,9 +15,6 @@ function ImageSlider({slides}) {
         }
     }
 
-    const autoSlide = () => {
-        setTimeout(nextSlide,3000);
-    }
 
     const prevSlide = () => {
         if(current === 0) {
