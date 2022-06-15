@@ -13,7 +13,7 @@ function Header() {
                 <ul>
                     <Link to={"/blueVoyage"}>Mavi Yolculuk</Link>
                     <Link to={"/about"}>Hakkımızda</Link>
-                    <li>SSS</li>
+                    <Link to={"/faq"}>SSS</Link>
                     <Link to={"/blog"}>Blog</Link>
                     <li>Giriş Yap</li>
                     <li>Üye Ol</li>
