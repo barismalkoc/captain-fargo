@@ -1,6 +1,6 @@
 import React from 'react';
 import './footer.scss'
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 function Footer() {
     return (
@@ -22,7 +22,7 @@ function Footer() {
           </div>
           <div className={"right-side"}>
             <ul>
-              <Link to={"/blueVoyage"}>Mavi Yolculuk</Link>
+              <NavLink to={"/blueVoyage"}>Mavi Yolculuk</NavLink>
               <Link to={"/about"}>Hakkımızda</Link>
               <li>SSS</li>
               <Link to={"/blog"}>Blog</Link>

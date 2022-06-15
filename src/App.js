@@ -6,6 +6,7 @@ import AboutUs from "./pages/AboutUs/AboutUs";
 import BlueVoyageInfo from "./components/BlueVoyageInfo/BlueVoyageInfo";
 import BlueVoyager from "./pages/BlueVoyager/BlueVoyager";
 import Blog from "./pages/Blog/Blog";
+import FAQPage from "./pages/FAQPage/FAQPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path={"/about"} element={<AboutUs/>}></Route>
         <Route path={"/blueVoyage"} element={<BlueVoyager/>}></Route>
         <Route path={"/blog"} element={<Blog/>}></Route>
+        <Route path={"/faq"} element={<FAQPage/>}></Route>
       </Routes>
 
       <Footer/>
