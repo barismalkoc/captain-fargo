@@ -1,8 +1,29 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './footer.scss'
 import {Link, NavLink} from "react-router-dom";
+import LoginModal from "../LoginModal/LoginModal";
 
 function Footer() {
+
+  const [onOpenModalLogin, setOnOpenModalLogin] = useState(false);
+  const [onOpenModalSignIn, setOnOpenModalSignIn] = useState(false);
+
+
+  function openModalLogin () {
+    setOnOpenModalLogin(true);
+  }
+
+  function  closeModalLogin () {
+    setOnOpenModalLogin(false);
+  }
+
+  function openModalSignIn () {
+    setOnOpenModalSignIn(true);
+  }
+
+  function  closeModalSignIn () {
+    setOnOpenModalSignIn(false);
+  }
     return (
       <div className={"footer"}>
         <div className={"container"}>
@@ -26,11 +47,13 @@ function Footer() {
               <Link to={"/about"}>Hakkımızda</Link>
               <Link to={"/faq"}>SSS</Link>
               <Link to={"/blog"}>Blog</Link>
-              <li>Giriş Yap</li>
-              <li>Üye Ol</li>
+              <li onClick={openModalLogin}>Giriş Yap</li>
+              <li onClick={openModalSignIn}>Üye Ol</li>
             </ul>
           </div>
+
         </div>
+        <LoginModal show={onOpenModalLogin} handleClose={() => closeModalLogin()}></LoginModal>
       </div>
     );
 }

@@ -1,9 +1,33 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './header.scss'
 import {Link} from "react-router-dom";
 import {HeaderData} from "./HeaderData";
+import LoginModal from "../LoginModal/LoginModal";
 
 function Header() {
+
+    const [onOpenModalLogin, setOnOpenModalLogin] = useState(false);
+    const [onOpenModalSignIn, setOnOpenModalSignIn] = useState(false);
+
+
+    function openModalLogin () {
+      setOnOpenModalLogin(true);
+    }
+
+    function  closeModalLogin () {
+      setOnOpenModalLogin(false);
+    }
+
+    function openModalSignIn () {
+      setOnOpenModalSignIn(true);
+    }
+
+    function  closeModalSignIn () {
+      setOnOpenModalSignIn(false);
+    }
+
+
+
     const logoData = HeaderData.logo;
     const headerLink = HeaderData.headerLink;
     return (
@@ -22,10 +46,13 @@ function Header() {
                       <Link to={link.url}  key={index}>{link.title}</Link>
                       )
                 })}
-                  <li>Giriş Yap</li>
-                  <li>Üye Ol</li>
+                  <li onClick={openModalLogin}>Giriş Yap</li>
+                  <li onClick={openModalSignIn}>Üye Ol</li>
                 </ul>
             </nav>
+              <LoginModal show={onOpenModalLogin} handleClose={() => closeModalLogin()}></LoginModal>
+
+
         </div>
     );
 }

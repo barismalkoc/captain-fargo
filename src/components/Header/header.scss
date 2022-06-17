@@ -30,6 +30,18 @@
           text-decoration: underline;
         }
       }
+
+      li {
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
+
+
+
 }
