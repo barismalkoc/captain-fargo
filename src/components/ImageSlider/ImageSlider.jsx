@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import "./ImageSlider.scss"
+import SearchBox from "../SearchBox/SearchBox";
 function ImageSlider({slides}) {
     const [current, setCurrent] = useState(0);
     const length = slides.length;
@@ -28,6 +29,7 @@ function ImageSlider({slides}) {
                     </div>
                 )
             })}
+            <SearchBox></SearchBox>
         </div>
     );
 }
