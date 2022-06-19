@@ -13,6 +13,7 @@ function Header() {
 
   function openModalLogin() {
     setOnOpenModalLogin(true);
+    closeModalSignIn();
   }
 
   function closeModalLogin() {
@@ -21,6 +22,7 @@ function Header() {
 
   function openModalSignIn() {
     setOnOpenModalSignIn(true);
+    closeModalLogin();
   }
 
   function closeModalSignIn() {
@@ -52,8 +54,6 @@ function Header() {
       </nav>
       <SignInModal show={onOpenModalSignIn} handleClose={() => closeModalSignIn()}></SignInModal>
       <LoginModal show={onOpenModalLogin} handleClose={() => closeModalLogin()}></LoginModal>
-
-
     </div>
   );
 }

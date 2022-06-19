@@ -4,7 +4,7 @@ function SearchBox(props) {
   return (
     <div className={"search-box-container"}>
       <ul className={"nav nav-tabs"}>
-        <li className={"nav nav-item cabin"}>
+        <li className={"nav nav-item cabin active"}>
           <span>Kabin Kirala</span>
         </li>
         <li className={"nav nav-item private"}>

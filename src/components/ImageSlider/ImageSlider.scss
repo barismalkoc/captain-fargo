@@ -8,15 +8,17 @@
     .left-arrow {
         position: absolute;
         top: 50%;
-        background-color: black;
         left: 20px;
         width: 30px;
         height: 30px;
+        img {
+            transform: rotate(180deg);
+        }
+
     }
 
     .right-arrow {
         position: absolute;
-        background-color: black;
         top: 50%;
         right: 20px;
         width: 30px;

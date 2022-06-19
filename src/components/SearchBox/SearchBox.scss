@@ -1,9 +1,13 @@
 .search-box-container {
   position: absolute;
-  width: 50%;
+  width: 60%;
   padding-top: 30%;
   .nav {
     display: flex;
+    .active {
+      color: #fff;
+      background-color: #00ccc2;
+    }
   }
   ul {
     list-style-type: none;

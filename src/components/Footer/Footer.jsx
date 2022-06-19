@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './footer.scss'
 import {Link, NavLink} from "react-router-dom";
 import LoginModal from "../LoginModal/LoginModal";
+import SignInModal from "../SignInModal/SignInModal";
 
 function Footer() {
 
@@ -11,6 +12,7 @@ function Footer() {
 
   function openModalLogin () {
     setOnOpenModalLogin(true);
+    closeModalSignIn();
   }
 
   function  closeModalLogin () {
@@ -19,6 +21,7 @@ function Footer() {
 
   function openModalSignIn () {
     setOnOpenModalSignIn(true);
+    closeModalLogin();
   }
 
   function  closeModalSignIn () {
@@ -54,6 +57,7 @@ function Footer() {
 
         </div>
         <LoginModal show={onOpenModalLogin} handleClose={() => closeModalLogin()}></LoginModal>
+        <SignInModal show={onOpenModalSignIn} handleClose={() => closeModalSignIn()}></SignInModal>
       </div>
     );
 }
