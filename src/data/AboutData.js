@@ -1,6 +1,5 @@
 export const AboutData = {
-
-  "about" : [
+  aboutHeader : [
     {
       title : "Hakkımızda",
       aboutDesc : "Captain Fargo, mavi yolculuk deneyimi yaşamak isteyen misafirlerimizin özel yat ya da kabin kiralayabildiği bir platform olarak, alanında profesyonel bir ekibin çalışmasıyla tasarlandı. Mavi yolculuğu bir tatil olmaktan öte bir deneyim olarak gören 3 girişimci mühendis tarafından, 2019 yılında kuruldu. Captain Fargo ailesi olarak amacımız, unutulmaz bir Mavi Yolculuk deneyimi yaşamanız için satın alma aşamasından, tatilinizin sonuna kadar her adımda ihtiyaçlarınıza göre en iyi hizmeti sunmaktır.",
@@ -28,8 +27,7 @@ export const AboutData = {
       ]
     }
   ],
-
-  "data" : [
+  aboutBody : [
     [
       {
         title : "Captain Fargo ile Mavi Yolculuk için en iyi fırsatları keşfet!",
@@ -94,7 +92,6 @@ export const AboutData = {
           "Unutulmaz manzaralar, el değmemiş koylar ve muhteşem bir tatil keşfetmeniz için sizi bekliyor. Gelin, bu deneyimi birlikte yaşayalım.",
         ]
       }
-      ]
-  ],
-
+    ]
+  ]
 }

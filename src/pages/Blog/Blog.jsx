@@ -1,11 +1,12 @@
 import React from 'react';
-import BlogCard from "../../components/BlogCard/BlogCard";
 import FargoBlog from "../../components/FargoBlog/FargoBlog";
 
-function Blog(props) {
+function Blog({blogData}) {
+
+  const fargoBlogData = blogData.fargoBlogData;
   return (
     <div className={"blog"}>
-      <FargoBlog></FargoBlog>
+      <FargoBlog fargoBlogData={fargoBlogData}></FargoBlog>
     </div>
   );
 }

@@ -1,6 +1,5 @@
 export const BlueVoyageData = {
-
-  "data" : [
+  data : [
     [
       {
         desc : [
@@ -33,11 +32,10 @@ export const BlueVoyageData = {
           "https://captainfargo.com/static/main/maviyolculuknedir_13.1ee200259b37.jpg",
         ]
       }
-
     ]
   ],
 
-  "footerData" : [
+  footerData : [
     {
       desc : [
         "Daha lüks Mavi Yolculuk deneyimi için özel yat kiralama seçeneğini seçebilirsiniz. Tekne seçimi, tur tarihi, yemek menüsü, tur programı gibi detayların tümü sizin istekleriniz doğrultusunda belirlenir. Deneyimli personelimiz sizin ve grubunuzun memnuniyeti için sadece size özel servis verir. Kişi sayınıza göre uygun tekneyi kumanyalı ya da kumanyasız olarak seçebilirsiniz.",

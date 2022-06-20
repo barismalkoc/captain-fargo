@@ -1,13 +1,12 @@
 import React from 'react';
 import BlogCard from "../BlogCard/BlogCard";
-import {FargoBlogData} from "./FargoBlogData";
 import "./FargoBlog.scss"
-function FargoBlog(props) {
-  const data = FargoBlogData;
+
+function FargoBlog({fargoBlogData}) {
   return (
     <div className={"fargo-blog"}>
       <div className={"blog"}>
-        <BlogCard props = {data}></BlogCard>
+        <BlogCard props = {fargoBlogData}></BlogCard>
       </div>
     </div>
   );

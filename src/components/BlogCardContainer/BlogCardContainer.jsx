@@ -1,15 +1,13 @@
 import React from 'react';
-import {BlogCardContainerData} from "./BlogCardContainerData";
 import "./BlogCardContainer.scss"
 import BlogCard from "../BlogCard/BlogCard";
 import {Link} from "react-router-dom";
 import "./BlogCardContainer.scss"
-function BlogCardContainer(props) {
-  const data = BlogCardContainerData;
+function BlogCardContainer({blogCardContainerData}) {
   return (
     <div className={"blog-container"}>
       <div className={"blog"}>
-        <BlogCard props = {data}></BlogCard>
+        <BlogCard props = {blogCardContainerData}></BlogCard>
       </div>
 
       <div className={"text-right"}>

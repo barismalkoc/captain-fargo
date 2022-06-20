@@ -1,11 +1,10 @@
 import React from 'react';
-import {HomeBlogData} from "./HomeBlogData";
 import "./HomeBlog.scss"
-function HomeBlog() {
+function HomeBlog({homeBlogData}) {
     return (
         <div className={"home-blogs"}>
             <div className={"home-blogs-row"}>
-                {HomeBlogData.map((blog, index) => {
+                {homeBlogData.map((blog, index) => {
                     return (
                         <div className={"blog"} key={index}>
                             <img className={"blog-image"} src={blog.image}/>

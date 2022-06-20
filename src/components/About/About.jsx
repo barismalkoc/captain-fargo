@@ -1,22 +1,21 @@
 import React from 'react';
 import "./About.scss"
-import {AboutData} from "./AboutData";
-function About(props) {
-  const aboutData = AboutData.about[0];
-  const info = AboutData.data[0];
+
+function About({aboutHeaderData, aboutBodyData}) {
+
   return (
     <div className={"about"}>
       <div className={"about-info"}>
         <br/>
-        <h1>{aboutData.title}</h1>
+        <h1>{aboutHeaderData[0].title}</h1>
         <br/>
-        <p>{aboutData.aboutDesc}</p>
+        <p>{aboutHeaderData[0].aboutDesc}</p>
         <br/>
         <div className={"images-container"}>
-          {aboutData.images.map((info, index) => {
+          {aboutHeaderData[0].images.map((info, index) => {
             return(
               <div className={"image-container"} key={index}>
-                <img src={info.image}/>
+                <img alt={"fargo"} src={info.image}/>
                 <h5>{info.imageTitle}</h5>
               </div>
             )
@@ -24,7 +23,7 @@ function About(props) {
         </div>
 
         <div>
-          {info.map((info, index) => {
+          {aboutBodyData[0].map((info, index) => {
             return (
               <div key={index}>
                 <h3>{info.title}</h3>

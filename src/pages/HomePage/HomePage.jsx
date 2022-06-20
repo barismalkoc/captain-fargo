@@ -1,18 +1,18 @@
 import ImageSlider from "../../components/ImageSlider/ImageSlider";
-import Header from "../../components/Header/Header";
-import {SliderData} from "../../components/ImageSlider/SliderData";
 import HomeBlog from "../../components/HomeBlog/HomeBlog";
 import BlogCardContainer from "../../components/BlogCardContainer/BlogCardContainer";
-import Footer from "../../components/Footer/Footer";
 
-function HomePage() {
+function HomePage({homePageData}) {
+
+  const sliderData = homePageData.sliderData;
+  const homeBlogData = homePageData.homeBlogData
+  const blogCardContainerData = homePageData.blogCardContainerData;
+
   return (
     <div className="homePage">
-
-      <ImageSlider slides={SliderData}></ImageSlider>
-      <HomeBlog/>
-      <BlogCardContainer/>
-
+      <ImageSlider slides={sliderData}/>
+      <HomeBlog homeBlogData={homeBlogData}/>
+      <BlogCardContainer blogCardContainerData={blogCardContainerData}/>
     </div>
   );
 }

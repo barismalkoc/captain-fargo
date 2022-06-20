@@ -1,6 +1,5 @@
-export const FAQData = {
-
-  "data" : [
+export const FAQPageData = {
+    dropDownMenuData : [
     {
       title : "Mavi Tur Nedir",
       desc : [

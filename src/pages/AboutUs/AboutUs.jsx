@@ -1,9 +1,12 @@
 import React from 'react';
 import About from "../../components/About/About";
-function AboutUs(props) {
+function AboutUs({aboutUsData}) {
+
+  const aboutHeaderData = aboutUsData.aboutHeader;
+  const aboutFooterData = aboutUsData.aboutBody;
   return (
     <div className={"about-us"}>
-        <About></About>
+        <About aboutHeaderData={aboutHeaderData} aboutBodyData={aboutFooterData}/>
     </div>
   );
 }

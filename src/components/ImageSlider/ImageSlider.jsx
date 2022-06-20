@@ -1,7 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import "./ImageSlider.scss"
 import SearchBox from "../SearchBox/SearchBox";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 function ImageSlider({slides}) {
   const [current, setCurrent] = useState(0);
@@ -22,7 +21,6 @@ function ImageSlider({slides}) {
   }
   return (
     <div className={"slider"}>
-
       <span className={"left-arrow"} onClick={prevSlide}>
            <img src={"\thttps://captainfargo.com/static/main/ic-right-arrow.179f968435bb.svg"}/>
       </span>
@@ -37,6 +35,15 @@ function ImageSlider({slides}) {
         )
       })}
       <SearchBox></SearchBox>
+      <ol className={"carousel-indicators"}>
+        {slides.map((slide, index) => {
+          if (index === current) {
+            return <li className={"active"}></li>
+          } else {
+            return <li></li>
+          }
+        })}
+      </ol>
     </div>
   );
 }
