@@ -6,6 +6,7 @@ import AboutUs from "./pages/AboutUs/AboutUs";
 import BlueVoyager from "./pages/BlueVoyager/BlueVoyager";
 import Blog from "./pages/Blog/Blog";
 import FAQPage from "./pages/FAQPage/FAQPage";
+import PrivateYachtCharter from "./pages/PrivateYachtCharter/PrivateYachtCharter";
 
 function App({data}) {
 
@@ -25,6 +26,7 @@ function App({data}) {
         <Route path={"/blueVoyage"} element={<BlueVoyager blueVoyageData={blueVoyageData}/>}></Route>
         <Route path={"/blog"} element={<Blog blogData={blogData}/>}></Route>
         <Route path={"/faq"} element={<FAQPage faqPageData={faqPageData}/>}></Route>
+        <Route path={"/privateYachtCharter"} element={<PrivateYachtCharter/>}></Route>
       </Routes>
       <Footer/>
     </>

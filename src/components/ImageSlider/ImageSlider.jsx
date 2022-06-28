@@ -34,7 +34,6 @@ function ImageSlider({slides}) {
           </div>
         )
       })}
-      <SearchBox></SearchBox>
       <ol className={"carousel-indicators"}>
         {slides.map((slide, index) => {
           if (index === current) {

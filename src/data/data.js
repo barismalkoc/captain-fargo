@@ -404,8 +404,6 @@ export const Data = {
         url : "/blog",
         title : "Blog",
       },
-
-
     ]
   }
 }

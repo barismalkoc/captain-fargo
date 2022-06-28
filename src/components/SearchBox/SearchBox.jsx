@@ -3,7 +3,12 @@ import "./SearchBox.scss"
 function SearchBox(props) {
 
 
+
+  const privateYachtCharter = () => {
+
+  }
   const [isOpen, setIsOpen] = useState("cabin");
+
 
   return (
     <div className={"search-box-container"}>
@@ -75,7 +80,7 @@ function SearchBox(props) {
               </select>
             </div>
             <div className={"input-group"}>
-              <button className={"btn-search"} type={"button"} id={"cabin-go"}>
+              <button className={"btn-search"} type={"button"} id={"cabin-go"} onClick={privateYachtCharter}>
                 <span className={"text"}>YOLCULUĞU BUL</span>
               </button>
             </div>
