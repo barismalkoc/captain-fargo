@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
 import "./SearchBox.scss"
+import {useNavigate} from "react-router";
 function SearchBox(props) {
 
-
+  const history = useNavigate();
 
   const privateYachtCharter = () => {
-
+      history("/privateYachtCharter");
   }
   const [isOpen, setIsOpen] = useState("cabin");
 
