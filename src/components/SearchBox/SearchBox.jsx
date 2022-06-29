@@ -64,7 +64,7 @@ function SearchBox(props) {
                      value placeholder={"Tarih Seç"} readOnly/>
             </div>
             <div className={"input-group"}>
-              <button className={"btn-search"} type={"button"} id={"cabin-go"}>
+              <button className={"btn-search"} type={"button"} id={"cabin-go"} onClick={privateYachtCharter}>
                 <span className={"text"}>TEKNE BUL</span>
               </button>
             </div>
