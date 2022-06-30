@@ -1,44 +1,62 @@
 import React from 'react';
 import "./productList.scss"
+import {useNavigate} from "react-router";
+import {YachtDetail} from "../../pages/PrivateYachtDetail/yachtDetail";
 
 function ProductList(props) {
+
+  const history = useNavigate();
+
+  const privateYachtDetail = (id) => {
+
+    history("/privateYachtDetail",
+      {state: {
+        yachtId : id,
+        }});
+  }
+
+  const yachtInfo = YachtDetail;
   return (
     <div className={"product"}>
       <div className={"product-list"}>
         <h3>
           30/07/2022 Kalkışlı Tekneler
         </h3>
-        <div className={"yacht-box"}>
-          <div className={"yacht-row"}>
-            <a>
-              <img
-                src={"https://www.bavariayat.com/fileadmin/_processed_/d/2/csm_bavaria-sy-cline-overview-c45-freisteller_0824c64a29.jpg"}/>
-            </a>
-            <div className={"text-container"}>
-              <a>
-                <h3>Standart Tekne</h3>
-              </a>
-              <p>6 Standart Kabin </p>
-            </div>
-            <div className={"price-box"}>
-              <div className={"price-header"}>
-                <span className={"price-discounted"}>82350₺</span>
-                <span className={"price-discounted-percentage"}> %20 indirim</span>
-              </div>
-              <div className={"price"}>
-                65880₺
-              </div>
-              <div className={"price-per"}>
-                /hafta
-              </div>
-              <a className={"inspect-button"}>
-                İNCELE
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
 
+          {yachtInfo.data.map((yachtDetail, index) => {
+            return (
+              <div className={"yacht-box"}>
+                <div className={"yacht-row"}>
+                  <a>
+                    <img
+                      src={yachtDetail[0].generalInfo.image}/>
+                  </a>
+                  <div className={"text-container"}>
+                    <a>
+                      <h3>{yachtDetail[0].generalInfo.title}</h3>
+                    </a>
+                    <p>{yachtDetail[0].generalInfo.subTitle}</p>
+                  </div>
+                  <div className={"price-box"}>
+                    <div className={"price-header"}>
+                      <span className={"price-discounted"}>{yachtDetail[0].generalInfo.price}₺</span>
+                      <span className={"price-discounted-percentage"}> %{yachtDetail[0].generalInfo.discountRate} indirim</span>
+                    </div>
+                    <div className={"price"}>
+                      {Math.round(yachtDetail[0].generalInfo.price - (yachtDetail[0].generalInfo.price * yachtDetail[0].generalInfo.discountRate / 100))}₺
+                    </div>
+                    <div className={"price-per"}>
+                      /hafta
+                    </div>
+                    <button className={"inspect-button"} onClick={() => privateYachtDetail(index)}>
+                      İNCELE
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )
+          })}
+      </div>
       <div className={"custom-date-form"}>
         <form>
           <p>Özel tarih ile rezervasyon talebi oluşturmak için lütfen aşağıdaki formu doldurun. Müsaitlik olması
@@ -74,6 +92,9 @@ function ProductList(props) {
               </div>
             </div>
           </div>
+          <button>
+            REZERVASYON TALEBİ GÖNDER
+          </button>
         </form>
       </div>
     </div>

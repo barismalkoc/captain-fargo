@@ -4,7 +4,6 @@ import {formSelect} from "./formSelect";
 
 function SignInModal({handleClose, show}) {
   const data = formSelect.data[0].option;
-  console.log(data)
   const showHideClassName = show ? "signIn-modal display-block" : "signIn-modal display-none";
   return (
     <div className={showHideClassName}>
