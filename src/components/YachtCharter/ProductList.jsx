@@ -72,20 +72,21 @@ function ProductList(props) {
               </div>
             <div className={"row"}>
               <div className={"input-group"}>
-                <input name={"name"} type={"text"} placeholder={"İsim - Soyisim"}/>
-              </div>
-              <div className={"input-group"}>
-                <input name={"email"} type={"email"} placeholder={"E-Posta Adresi"}/>
-              </div>
-            </div>
-            <div className={"row"}>
-              <div className={"input-group"}>
                 <input name={"phone"} type={"text"} placeholder={"Telefon No"}/>
               </div>
               <div className={"input-group"}>
                 <input name={"port"} type={"text"} placeholder={"Kalkış Limanı"}/>
               </div>
             </div>
+            <div className={"row"}>
+              <div className={"input-group"}>
+                <input name={"starting-date"} type={"text"} placeholder={"Başlangıç Tarihi"}/>
+              </div>
+              <div className={"input-group"}>
+                <input name={"end-date"} type={"text"} placeholder={"Bitiş Tarihi"}/>
+              </div>
+            </div>
+
             <div className={"row"}>
               <div className={"input-group"}>
                 <textarea name={"notes"} placeholder={"Notlar (Yetişkin, çocuk ve bebek yolcu sayısını mutlaka belirtiniz)"}/>
