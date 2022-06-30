@@ -20,8 +20,8 @@
       flex-wrap: wrap;
 
       .blog-image {
-        width: 75px;
-        height: 75px;
+        width: 4vw;
+        height: 4vw;
       }
 
       h3 {
@@ -46,10 +46,13 @@
     }
   }
   @media screen and (max-width: 992px) {
-    .search-box-container {
-      width: 100%;
-      padding-left: 0;
-    }
+        .home-blogs-row {
+          width: 100%;
+          flex-wrap: wrap;
+          .blog {
+            width: 100%;
+          }
+        }
   }
 
 

@@ -18,7 +18,7 @@
 
   .blog-card-row {
     display: flex;
-    gap: 5px;
+    gap: 0.5%;
     flex-wrap: wrap;
 
     .blog-card {
@@ -67,6 +67,10 @@
       padding-left: 6px;
     }
   }
-
+}
+@media screen and (max-width: 992px) {
+  .blog-card {
+    width: 100% !important;
+  }
 }
 
