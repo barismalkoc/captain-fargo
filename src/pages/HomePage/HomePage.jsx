@@ -11,8 +11,8 @@ function HomePage({homePageData}) {
 
   return (
     <div className="homePage">
-      <ImageSlider slides={sliderData}/>
       <SearchBox></SearchBox>
+      <ImageSlider slides={sliderData}/>
       <HomeBlog homeBlogData={homeBlogData}/>
       <BlogCardContainer blogCardContainerData={blogCardContainerData}/>
     </div>
